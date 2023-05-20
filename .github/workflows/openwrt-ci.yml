@@ -10,6 +10,10 @@ name: OpenWrt-CI
 on:
   schedule:
     - cron: 0 20 * * *
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Test scenario tags'  
 
 permissions:
   contents: read
